@@ -1,0 +1,85 @@
+/* Shared Cute math design system. No external fonts or image dependencies. */
+:root{--cute-ink:#262449;--cute-muted:#787691;--cute-purple:#6c63ff;--cute-line:#e3e2f3;--cute-shadow:0 12px 35px #6c63ff0a}
+body.cute-theme{margin:0;color:var(--cute-ink);font-family:Tahoma,Arial,sans-serif;background:radial-gradient(ellipse at 90% 0,#e8e7ff,transparent 45%),#f7f7fc}
+body.cute-theme.subject-view-page,body.cute-theme.course-overview-page{background:radial-gradient(ellipse at 90% 0,#e8e7ff,transparent 45%),#f7f7fc!important}
+.cute-theme *{box-sizing:border-box}
+.cute-theme button,.cute-theme a,.cute-theme input,.cute-theme select{transition:background-color .18s,color .18s,border-color .18s,box-shadow .18s}
+.cute-theme :focus-visible{outline:3px solid #6c63ff;outline-offset:4px}
+.cute-theme .site-header{background:#ffffffed;border-bottom:1px solid var(--cute-line);box-shadow:0 3px 18px #6c63ff05}
+.cute-theme .site-header__inner{min-height:86px}
+.cute-theme .site-nav>a{padding:10px 14px;border-radius:12px;font-weight:600}
+.cute-theme .site-nav>a:hover{background:#eae9ff;color:#6c63ff}
+.cute-theme .primary,.cute-theme .submit-button,.cute-theme .login-button{background:linear-gradient(110deg,#6c63ff,#6c63ff);box-shadow:0 5px 15px #6c63ff22}
+.cute-theme .primary:hover,.cute-theme .submit-button:hover,.cute-theme .login-button:hover{color:white;box-shadow:0 7px 22px #6c63ff40;filter:brightness(1.05)}
+.cute-theme .secondary:hover,.cute-theme .soft:hover{background:#e6e5fb;border-color:#bbb8ed}
+.cute-theme .card{border-color:var(--cute-line);box-shadow:var(--cute-shadow)}
+.cute-theme .topic:hover,.cute-theme .choice:hover{border-color:#aaa6eb;background:#f7f7ff}
+.cute-theme .summary{border-top:3px solid #6c63ff}
+.cute-theme .badge{background:#e7e6fc;color:#6c63ff}
+.cute-theme .course-overview{width:min(1100px,calc(100% - 32px));padding:32px;background:#fff;border:1px solid var(--cute-line);border-radius:24px;box-shadow:var(--cute-shadow)}
+.cute-theme .course-heading{background:linear-gradient(110deg,#6c63ff,#6c63ff);padding:13px 22px}
+.cute-theme .course-list{counter-reset:lesson}
+.cute-theme .course-link{counter-increment:lesson;display:flex;align-items:center;gap:14px;text-align:left;padding:18px;background:#f8f8fe;border:1px solid var(--cute-line);border-radius:14px;color:#434165;box-shadow:none;line-height:1.6}
+.cute-theme .course-link::before{content:counter(lesson,decimal-leading-zero);display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#e4e3fa;color:#6c63ff;font-size:12px;font-weight:bold}
+.cute-theme .course-link:hover{background:#ebeafa;border-color:#b3b0e9;box-shadow:0 5px 15px #58549710}
+.cute-theme .subject-layout{width:min(1320px,calc(100% - 32px));gap:24px;padding-top:24px;grid-template-columns:290px minmax(0,1fr)}
+.cute-theme .subject-menu{min-height:0;padding:25px 18px;background:linear-gradient(155deg,#6c63ff,#6c63ff);border-radius:20px;box-shadow:0 10px 30px #6c63ff22}
+.cute-theme .subject-menu h1{padding:0 10px 18px;border-bottom:1px solid #ffffff30;line-height:1.7}
+.cute-theme .subject-menu a{padding:9px 11px;margin:3px 0;border-radius:10px;line-height:1.65;font-size:14px}
+.cute-theme .subject-menu a:hover,.cute-theme .subject-menu a[aria-current="page"]{background:#ffffff24;text-decoration:none}
+.cute-theme .subject-viewer{padding:24px;min-width:0;background:white;border:1px solid var(--cute-line);border-radius:20px;box-shadow:var(--cute-shadow)}
+.cute-theme .lesson-title{background:#eae9fb;color:#6c63ff;border-radius:12px;line-height:1.6}
+.cute-theme.lesson-page .landing-page>.container{width:min(980px,calc(100% - 32px));margin:28px auto;padding:32px;background:#fff;border:1px solid var(--cute-line);border-radius:20px;box-shadow:var(--cute-shadow)}
+.cute-theme.lesson-page .content{font-size:16px;line-height:1.95;overflow-wrap:anywhere}
+.cute-theme.lesson-page .content>h1,.cute-theme.lesson-page .content>h2{color:#6c63ff;margin:0 0 22px}
+.cute-theme.lesson-page .content section{padding:6px 0 18px;border-bottom:1px solid #eae9f5;margin:14px 0}
+.cute-theme.lesson-page .content h3{font-size:19px;color:#6c63ff;margin:18px 0 12px}
+.cute-theme.lesson-page .content p{margin:12px 0}
+.cute-theme.lesson-page .content ul{padding-left:24px;list-style:disc}
+.cute-theme.lesson-page .content li{padding:5px 0}
+.cute-theme.lesson-page .content li::marker{color:#6c63ff}
+.cute-theme.embedded-lesson .landing-page>.container{width:100%;margin:0;padding:12px 18px;border:0;border-radius:0;box-shadow:none}
+.cute-theme .account-page,.cute-theme .login-page{background:white;border:1px solid var(--cute-line);border-radius:24px;box-shadow:0 18px 60px #6c63ff12;overflow:hidden}
+.cute-theme .account-page h1,.cute-theme .login h1{color:#6c63ff}
+.cute-theme .account-page .field,.cute-theme .login .field{background:#f8f8fd;border-color:var(--cute-line);border-radius:12px}
+.cute-theme .register{background:linear-gradient(145deg,#6c63ff,#6c63ff)}
+.cute-theme.home-page .landing-page>.content>.container{width:min(1170px,calc(100% - 40px));gap:60px;min-height:calc(100vh - 110px);padding:60px 20px}
+.cute-theme.home-page .info{flex:1}
+.cute-theme.home-page .info::before{content:'✦  LEARN · PRACTICE · GROW';display:inline-block;padding:9px 15px;border:1px solid #d3d1f3;border-radius:30px;color:#6c63ff;background:#eeedfc;font-size:11px;font-weight:bold;letter-spacing:1.5px}
+.cute-theme.home-page .landing-page .content .info h1{font-size:clamp(34px,4.4vw,60px);line-height:1.15;color:#33305f;letter-spacing:-1.7px;margin:24px 0}
+.cute-theme.home-page .landing-page .content .info p{font-size:16px;line-height:1.95;color:#75748e}
+.cute-theme.home-page .info button{border-radius:14px!important;padding:0!important;background:linear-gradient(110deg,#6c63ff,#6c63ff)!important;box-shadow:0 7px 20px #6c63ff20;margin-top:18px!important}
+.cute-theme.home-page .info button a{display:block;padding:15px 26px;color:#fff;font-size:15px}
+.cute-theme.home-page .info button:hover{box-shadow:0 10px 28px #6c63ff40}
+.cute-theme.home-page .image{flex:1;padding:28px;border:1px solid #dfdef6;border-radius:40% 35% 38% 28%;background:radial-gradient(circle,#e6e5ff,#f6f6fe);box-shadow:0 18px 55px #6c63ff10}
+.cute-theme.home-page .image img{width:100%;height:auto;filter:drop-shadow(0 14px 14px #6c63ff24)}
+@media(max-width:900px){.cute-theme .subject-layout{grid-template-columns:1fr}.cute-theme .subject-menu{padding:20px}.cute-theme .subject-viewer{padding:16px}.cute-theme.home-page .landing-page>.content>.container{gap:25px}}
+@media(max-width:700px){.cute-theme .site-header__inner{min-height:auto;padding:14px 0 10px;gap:14px}.cute-theme .site-nav{gap:6px}.cute-theme .site-nav>a{padding:8px 10px}.cute-theme .category-panel{top:128px;max-height:calc(100dvh - 145px)}.cute-theme .course-overview{padding:22px 16px}.cute-theme.lesson-page .landing-page>.container{padding:22px 18px}.cute-theme.embedded-lesson .landing-page>.container{padding:8px}.cute-theme.home-page .landing-page>.content>.container{flex-direction:column;padding:35px 4px;min-height:0}.cute-theme.home-page .image{max-width:350px}.cute-theme.home-page .info{text-align:center}.cute-theme.home-page .info button{width:100%}.cute-theme .account-page{padding:28px 22px}}
+@media(prefers-reduced-motion:no-preference){.cute-theme .course-overview,.cute-theme #quiz-app,.cute-theme .account-page{animation:cute-enter .35s ease-out}@keyframes cute-enter{from{opacity:.5;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
+@media(prefers-reduced-motion:reduce){.cute-theme *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Original course picker layout, with white topic buttons. */
+body.cute-theme.course-overview-page{background:#fff!important}
+.cute-theme .course-overview{width:min(900px,calc(100% - 32px));margin:30px auto 60px;padding:24px 20px 34px;background:#fff;color:#6c63ff;border:0;border-radius:0;box-shadow:none;animation:none}
+.cute-theme .course-heading{width:fit-content;margin:0 auto 22px;padding:8px 18px;color:#fff;background:#6c63ff;border:0;border-radius:20px;font-size:20px;font-weight:700;text-align:center}
+.cute-theme .course-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+.cute-theme .course-link{display:block;padding:8px 12px;border:1px solid #6c63ff;border-radius:20px;background:#fff;color:#6c63ff;box-shadow:0 2px 3px #322f5c33;font-size:15px;line-height:1.35;text-align:center;text-decoration:none}
+.cute-theme .course-link::before{content:none;display:none}
+.cute-theme .course-link:hover{background:#fff;color:#6c63ff;border-color:#6c63ff;box-shadow:0 2px 5px #6c63ff33}
+.cute-theme .course-link:active,.cute-theme .course-link:focus-visible{background:#6c63ff;color:#fff;border-color:#6c63ff}
+.cute-theme .course-link:focus-visible{outline:3px solid #cfccff;outline-offset:3px}
+@media(max-width:600px){.cute-theme .course-list{grid-template-columns:1fr}.cute-theme .course-heading{font-size:18px}}
+
+/* Consistent lesson heading color, including logic lessons. */
+.cute-theme.lesson-page .content h1,
+.cute-theme.lesson-page .content h2,
+.cute-theme.lesson-page .content h3,
+.cute-theme.lesson-page .content h4,
+.cute-theme.lesson-page .content h5,
+.cute-theme.lesson-page .content h6{color:#6c63ff}
+
+/* Illustrations supplied with the lesson content. */
+.cute-theme.lesson-page .source-lesson-figure{margin:24px 0;padding:16px;background:#fafaff;border:1px solid #dedcff;border-radius:16px}
+.source-lesson-figure .lesson-figure{display:block;width:100%;height:auto;max-width:100%;border-radius:12px}
+.source-lesson-figure figcaption{margin-top:12px;color:#656379;font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+@media(max-width:600px){.cute-theme.lesson-page .source-lesson-figure{padding:8px}.source-lesson-figure figcaption{font-size:12px}}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -197,15 +197,15 @@ a {
     <div class="landing-page">
       <header>
         <div class="container">
-          <a href="#" class="logo">
+          <a href="../index.html" class="logo">
                   CUT 
             <b>MATH</b></a>
           <ul class="links">
-            <li><a title="หน้าหลัก" href="http://127.0.0.1:5500/HTML/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81.html"
+            <li><a title="หน้าหลัก" href="./%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81.html"
               target="_blank"> หน้าหลัก </a></li>
-            <li>แบบทดสอบ</li>
-            <li>หมวดหมู่</li>
-            <li><a title="เข้าสู่ระบบ" href="http://127.0.0.1:5500/HTML/%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%B4%E0%B8%99.html#"
+            <li><a href="./คณิต 1.html">คณิต 1</a></li>
+            <li><a href="./คณิต 2.html">คณิต 2</a></li>
+            <li><a title="เข้าสู่ระบบ" href="./%E0%B8%A5%E0%B9%87%E0%B8%AD%E0%B8%84%E0%B8%AD%E0%B8%B4%E0%B8%99.html"
               target="_blank">  เข้าสู่ระบบ </a></li>
             
          </ul>
@@ -216,48 +216,41 @@ a {
         <!-- ใช้ div เป็น container -->
         <div class="container">
           <!-- ใช้ div เป็นข้อความหรือเนื้อหา -->
-          <div class="content">  
-
-          <h1> เซต</h1> 
-        <br>  1.เซต<br>
-<br>2.การดำเนินการระหว่างเซต<br>
-     <br> 2.1 อินเตอร์เซกชัน<br>
-     <br> 2.2 ยูเนียน<br>
-     <br> 2.3 คอมพลีเมนต์<br>
-      <br>2.4 ผลต่างระหว่างเซต<br>
-<br>3.การแก้ปัญหาโดยใช้เซต<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <div class="content">
+            <h1>เซต</h1>
+<p>เซตคือกลุ่มของสิ่งที่ระบุสมาชิกได้ชัดเจน เขียน A={1,2,3} และใช้ x∈A แปลว่า x เป็นสมาชิกของ A เซตว่าง ∅ ไม่มีสมาชิกเลย เซต {∅} ต่างออกไป เพราะมีสมาชิกหนึ่งตัวคือเซตว่าง</p>
+<figure class="source-lesson-figure"><svg class="lesson-figure" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" role="img" aria-label="แผนภาพเวนน์สองเซตและส่วนร่วม"><title>แผนภาพเวนน์สองเซตและส่วนร่วม</title><rect width="680" height="280" rx="16" fill="#f7fafc"/><circle cx="276" cy="145" r="94" fill="#d7ebf6" fill-opacity=".62" stroke="#3988bb" stroke-width="3"/><circle cx="404" cy="145" r="94" fill="#fce5d4" fill-opacity=".55" stroke="#e49555" stroke-width="3"/><text x="230" y="148" text-anchor="middle" fill="#1c3347" font-size="18" font-family="Arial,sans-serif">A only</text><text x="340" y="148" text-anchor="middle" fill="#24557f" font-size="18" font-family="Arial,sans-serif">A ∩ B</text><text x="450" y="148" text-anchor="middle" fill="#1c3347" font-size="18" font-family="Arial,sans-serif">B only</text><text x="223" y="55" text-anchor="middle" fill="#3988bb" font-size="22" font-family="Arial,sans-serif">A</text><text x="461" y="55" text-anchor="middle" fill="#e49555" font-size="22" font-family="Arial,sans-serif">B</text></svg><figcaption>ส่วนที่วง A และวง B ทับกันคือ A∩B และต้องลบออกหนึ่งครั้งเมื่อนับ A∪B</figcaption></figure>
+<section>
+<h3>การดำเนินการกับเซต</h3>
+<p>A∪B คือสมาชิกที่อยู่ใน A หรือ B หรือทั้งคู่ A∩B คือสมาชิกที่อยู่ทั้งคู่ A−B คืออยู่ใน A แต่ไม่อยู่ใน B ส่วน Aᶜ คือสมาชิกในเอกภพสัมพัทธ์ U ที่ไม่อยู่ใน A ต้องระบุ U ก่อนพูดถึงส่วนเติมเต็ม เซตย่อย A⊆B หมายถึงสมาชิกทุกตัวของ A อยู่ใน B</p>
+</section>
+<section>
+<h3>การนับด้วยแผนภาพเวนน์</h3>
+<p>n(A∪B)=n(A)+n(B)−n(A∩B) เพราะจุดตัดถูกนับซ้ำสองครั้ง ถ้าโจทย์ถาม “เฉพาะ A” ให้ใช้ n(A)−n(A∩B) ถ้าถาม “ไม่อยู่ทั้งสองเซต” ให้เอาจำนวนทั้งหมดลบ n(A∪B)</p>
+</section>
+<section>
+<h3>ตัวอย่างที่ 1 สมาชิกของเซต</h3>
+<p>A={1,2,3}, B={3,4} จะได้ A∪B={1,2,3,4}, A∩B={3}, A−B={1,2} และ B−A={4} สังเกตว่า A−B กับ B−A โดยทั่วไปไม่เท่ากัน</p>
+</section>
+<section>
+<h3>ตัวอย่างที่ 2 สำรวจนักเรียน</h3>
+<p>นักเรียน 40 คน ชอบคณิต 25 คน ชอบวิทย์ 18 คน ชอบทั้งสอง 10 คน เริ่มใส่ 10 ตรงกลาง จากนั้นเฉพาะคณิต 25−10=15 เฉพาะวิทย์ 18−10=8 รวมในวง 15+10+8=33 คนนอกวง 40−33=7 คน</p>
+</section>
+<section>
+<h3>สมบัติที่ควรรู้</h3>
+<p>กฎเดอมอร์แกนของเซตคือ (A∪B)ᶜ=Aᶜ∩Bᶜ และ (A∩B)ᶜ=Aᶜ∪Bᶜ เซตที่มี n สมาชิกมีเซตย่อย 2ⁿ เซต เพราะสมาชิกแต่ละตัวเลือกได้สองทางว่า “อยู่” หรือ “ไม่อยู่” ในเซตย่อย</p>
+</section>
+<section>
+<h3>จุดที่มักสับสน</h3>
+<ul><li>“อย่างน้อยหนึ่งกลุ่ม” หมายถึง A∪B แต่ “ทั้งสองกลุ่ม” หมายถึง A∩B</li><li>∈ ใช้เทียบสมาชิกกับเซต ส่วน ⊆ ใช้เทียบเซตกับเซต</li><li>สูตรนับสองเซตต้องลบจุดตัดหนึ่งครั้งเสมอ เว้นกรณีจุดตัดเป็นศูนย์</li></ul>
+</section>
+<section>
+<h3>ลองทำด้วยตัวเอง</h3>
+<p>1. n(A)=12,n(B)=9,n(A∩B)=4 ให้ n(A∪B)=17 2. A={a,b,c} มีเซตย่อย 8 เซต 3. มีทั้งหมด 30 คน อยู่ใน A∪B 22 คน คนนอกวงมี 8 คน</p>
+</section>
+</div>
+</div>
+</div>
+<script src="../Js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿.lesson-lab,.lesson-recap{padding:24px!important;margin:24px 0!important;border:1px solid #dedcff!important;border-radius:18px;background:#fafaff;color:#292744}
+.lab-kicker{font-size:12px;color:#6c63ff;font-weight:bold}
+.lesson-lab h3,.lesson-recap h3{margin:8px 0 12px!important}
+.lab-layout{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:20px}
+.lab-layout>div{min-width:0}
+.lesson-lab canvas{display:block;width:100%;height:330px;background:#fff;border:1px solid #dedcff;border-radius:12px;cursor:grab}
+.lab-controls{display:flex;flex-direction:column;gap:12px;font-size:12px}
+.lab-controls label{display:block;line-height:1.6}
+.lab-controls input{display:block;width:100%;accent-color:#6c63ff}
+.lab-controls output{color:#6c63ff;font-weight:bold}
+.lab-controls button{padding:8px;border:1px solid #dedcff;border-radius:9px;background:#fff;color:#6c63ff;cursor:pointer;font:inherit}
+.lab-controls button:hover{background:#f0efff}
+.lab-help{font-size:12px;color:#77758c}
+.lab-observation{padding:14px;border-radius:12px;background:#f0efff;line-height:1.8;overflow-wrap:anywhere}
+.lesson-recap a{display:inline-block;padding:12px 20px;border-radius:12px;background:#6c63ff;color:#fff!important;text-decoration:none;font-weight:bold}
+.lesson-recap li{margin:8px 0}
+.lesson-lab :focus-visible,.lesson-recap a:focus-visible{outline:3px solid #aaa5ff;outline-offset:3px}
+@media(max-width:760px){.lab-layout{grid-template-columns:1fr}.lab-controls{display:grid;grid-template-columns:1fr 1fr}.lesson-lab,.lesson-recap{padding:16px!important}}

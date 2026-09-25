@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบทดสอบ | Cute math</title><link rel="stylesheet" href="../CSS/quiz.css">
+</head>
+<body class="quiz-page">
+<main id="quiz-app"></main>
+<div id="notice" role="status" aria-live="polite" hidden>
+  <span id="notice-icon" aria-hidden="true">✓</span><span id="notice-message"></span>
+  <button id="notice-close" type="button" aria-label="ปิดข้อความแจ้งเตือน">×</button>
+</div>
+<dialog id="quiz-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+  <button id="dialog-close" class="dialog-close" type="button" aria-label="ปิดหน้าต่าง">×</button>
+  <div class="dialog-icon" aria-hidden="true">▤</div>
+  <span class="dialog-eyebrow">CUTE MATH · แบบทดสอบ</span>
+  <h2 id="dialog-title"></h2>
+  <p id="dialog-description"></p>
+  <div class="dialog-actions">
+    <button id="dialog-cancel" class="secondary" type="button" autofocus>ยกเลิก</button>
+    <button id="dialog-confirm" class="primary" type="button">ยืนยัน</button>
+  </div>
+</dialog>
+<script src="../Js/quiz-data.js"></script><script src="../Js/script.js"></script><script src="../Js/quiz.js"></script>
+</body></html>

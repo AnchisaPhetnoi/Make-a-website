@@ -1,179 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUT MATH</title>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Demo | CUT MATH</title>
     <style>
-    /*Start Global Style*/
-    *{
+      * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-    }
-    body{
-        background:#e9ebee;
+      }
+      body {
+        min-height: 100vh;
+        background: #e9ebee;
+        font-family: Arial, sans-serif;
+      }
+      .login-page {
+        width: min(1100px, calc(100% - 40px));
+        min-height: 650px;
+        margin: 34px auto;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 16px 40px rgba(37, 35, 70, 0.16);
+      }
+      .login,
+      .register {
+        width: 50%;
+      }
+      .login {
+        padding: 76px 58px 42px;
+        background: #fafafa;
+        text-align: center;
+      }
+      .login h1 {
+        margin-bottom: 34px;
+        font-size: 2.3rem;
+      }
+      .login-form {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+      .field {
+        width: 100%;
+        padding: 13px;
+        margin-bottom: 20px;
+        border: 0;
+        background: #eeeeef;
+        font: inherit;
+      }
+      .login-meta {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        margin: 4px 0 18px;
+        font-size: 0.9rem;
+      }
+      .remember {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .login a {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .login a:hover {
+        color: #6c63ff;
+      }
+      .login-button {
+        width: 100%;
+        margin: 16px 0 26px;
+        padding: 12px;
+        border: 0;
+        border-radius: 20px;
+        background: #6c63ff;
+        color: #fff;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .login-button:hover {
+        background: #6c63ff;
+      }
+      .demo-note {
+        margin-bottom: 24px;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      .social-divider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 14px 0 24px;
+        color: #555;
+      }
+      .social-divider::before,
+      .social-divider::after {
+        content: "";
+        flex: 1;
+        border-top: 1px solid #ccc;
+      }
+      .socials {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height:100vh;
-        font-family: sans-serif;
-    }
-    .container{
-        width: 80%;
-        margin: auto;
-        padding: 20px;
-      height:100%
-    }
-    
-    .login ,.register{width: 50%}
-    
-    /*Start Login Style*/
-    .login{
-        float:left;
-        background-color: #fafafa;
-        height: 100%;
-        border-radius: 10px 0 0 10px;
-        text-align: center;
-        padding-top: 100px;
-    }
-    .login h1{
-        margin-bottom: 40px;
-        font-size: 2.5em;
-    }
-    
-    input[type="email"] , input[type="password"]{
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 30px;
-        border: none;
-        background-color: #eeeeef;
-    }
-    input[type="checkbox"]{
-        float: left;
-        margin-right: 5px;
-    }
-    .login span{
-        float: left
-    }
-    .login a{
-        float: right;
-        text-decoration: none;
-        color: #000;
-        transition: 0.3s all ease-in-out;
-    }
-    .login a:hover{color: #6c63ff;font-weight: bold}
-    .login button{
-        width: 100%;
-        margin: 30px 0;
-        padding: 10px;
-        border: none;
-        background-color:#6c63ff;
-        color: #fff;
-        font-size: 20px;
-        cursor: pointer;
-        transition: 0.3s all ease-in-out;
-    }
-    .login button:hover{
-        width:97%;
-        font-size: 22px;
-        border-radius: 5px;
-        
-    }
-    .login hr{
-        width: 30%;
-        display: inline-block
-    }
-    
-    .login p{
-        display: inline-block;
-        margin: 0px 10px 30px;
-    }
-    .login ul{
+        gap: 18px;
+        margin-bottom: 14px;
         list-style: none;
-        margin-bottom:40px;  
-    }
-    .login ul li{
+      }
+      .socials li {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        background: #fff;
+        font-size: 1.55rem;
+        font-weight: 700;
+      }
+      .facebook-icon { color: #1877f2; font-family: Arial, sans-serif; }
+      .email-icon { color: #ea4335; font-size: 1.35rem !important; }
+      .signup-link {
         display: inline-block;
-        margin-right: 30px;
-        cursor: pointer;
-    }
-    .login ul li:hover{opacity: 0.6}
-    .login ul li:last-child{margin-right: 0}
-    .login .copyright{
-        display: inline-block;
-        float: none;
-    }
-    /*Start Register Style*/
-    .register{
-        float: right;
-        background-image: linear-gradient(135deg, #454061 5%, #6c63ff 95%);
-        height: 100%;
-        color:#fff;
-        border-radius:  0 10px 10px  0;
-        text-align: center;
-        padding: 100px 0;
-    }
-    .register h2{
-        margin: 30px 0;
-        font-size: 50px;
-        letter-spacing: 3px
-    }
-    .register p{
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-    .register button{
-        background-color: transparent;
-        border: 1px solid #FFF;
-        border-radius: 20px;
-        padding: 10px 20px;
+        margin-bottom: 28px;
+        color: #6c63ff !important;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+      .copyright {
+        color: #666;
+        font-size: 0.88rem;
+      }
+      .register {
+        padding: 100px 56px;
+        background-image: linear-gradient(135deg, #424061 5%, #6c63ff 95%);
         color: #fff;
-        font-size: 20px;
-        text-transform: uppercase;
-        transition:0.2s all  ease-in-out;
-    }
-    .register button:hover{
-        color: #2222b3;
-        background-color: #fff;
-        cursor: pointer;
-    }
-  
- 
+        text-align: center;
+      }
+      .register h2 {
+        margin: 30px 0;
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+      }
+      .register p {
+        margin-bottom: 30px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .lesson-link {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+      .lesson-link:hover {
+        background: #fff;
+        color: #6c63ff;
+      }
+      @media (max-width: 760px) {
+        .login-page {
+          width: min(520px, calc(100% - 24px));
+          margin: 20px auto;
+          display: block;
+        }
+        .login,
+        .register {
+          width: 100%;
+        }
+        .login,
+        .register {
+          padding: 44px 24px;
+        }
+        .register h2 {
+          font-size: 2rem;
+        }
+      }
     </style>
-</body>
-</html><div class="container">
-    <div class="login">
-       <div class="container">
-            <h1>Log in</h1>
-            <input type="email" placeholder="เบอร์โทรศัพน์">
-            <input type="password" placeholder="Password"><br>
-            <input type="checkbox"><span>Remember me</span>
-            <a href="#">Forgot password?</a>
-            <button>log in</button>
-            <hr><p>คลิกเข้าสู่ระบบ</p><hr>
-            <ul>
-                <li><i class=" box-icon type='logo' name='facebook-circle'> /box-icon>"></i></li>
-                <li><i class="i class= fas fa-envelope email-icon"></i></li>
-                <li><i class="fas fa-phone-alt telephone-icon"></i></li>
-               
-            </ul>
-            <div class="clearfix"></div>
-            <span class="copyright">&copy; CUT MATH </span>  
-       </div>
-    </div>
-    <div class="register">
-        <div class="container">
-            <i class="fas fa-user-plus fa-5x"></i>
-            <h2>ยินดีต้อนรับเข้าสู่ระบบ !</h2>
-            <p>CUT MATH  ใช้สำหรับศึกษา คณิตศาสตร์ประยุกต์ 1 และ คณิตศาสตร์ประยุกต์ 2 หรือ ผู้ที่ใช้สอบ A-Level</p>
-            <button>ลงทะเบียน <i class="fas fa-arrow-circle-right"></i></button>
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login" aria-labelledby="login-title">
+        <div class="login-form">
+          <h1 id="login-title">Log in</h1>
+          <form onsubmit="return false">
+            <input class="field" type="email" placeholder="Email" aria-label="อีเมล" />
+            <input class="field" type="password" placeholder="Password" aria-label="รหัสผ่าน" />
+            <div class="login-meta">
+              <a href="./ลืมรหัสผ่าน.html">ลืมรหัสผ่าน?</a>
+            </div>
+            <button class="login-button" type="button" onclick="window.location.href='../index.html'">เข้าสู่ระบบ</button>
+          </form>
+          <div class="social-divider">คลิกเข้าสู่ระบบ</div>
+          <ul class="socials" aria-label="ช่องทางติดต่อแบบ Demo">
+            <li class="facebook-icon" aria-label="Facebook">f</li>
+            <li class="email-icon" aria-label="Email">✉</li>
+          </ul>
+          <a class="signup-link" href="./สมัครสมาชิก.html">สมัครสมาชิก</a>
+          <div class="copyright">&copy; CUT MATH</div>
         </div>
-    </div>  
-
-   </div>
-
-</head>
-<body>
-</head>
-<body>
+      </section>
+      <section class="register" aria-labelledby="welcome-title">
+        <div>
+          <h2 id="welcome-title">ยินดีต้อนรับเข้าสู่ระบบ!</h2>
+          <p>CUT MATH ใช้สำหรับศึกษาคณิตศาสตร์ประยุกต์ 1 และคณิตศาสตร์ประยุกต์ 2 หรือผู้ที่ใช้สอบ A-Level</p>
+          <a class="lesson-link" href="./หน้าแรก.html">ดูบทเรียน</a>
+        </div>
+      </section>
+    </main>
+    <script src="../Js/script.js"></script>
+  </body>
+</html>

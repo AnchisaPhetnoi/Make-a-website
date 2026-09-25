@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ลืมรหัสผ่าน | CUT MATH</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; background: #fff; font-family: Arial, sans-serif; color: #2f2f2f; }
+      .account-page { width: min(520px, calc(100% - 32px)); margin: 48px auto; padding: 38px; border: 1px solid #e6e5f2; border-radius: 20px; box-shadow: 0 12px 32px rgba(55, 52, 100, 0.12); }
+      h1 { margin: 0 0 14px; text-align: center; font-size: 2rem; }
+      .description { margin: 0 0 28px; color: #666; line-height: 1.6; text-align: center; }
+      .field { width: 100%; margin-bottom: 16px; padding: 13px; border: 1px solid #e2e1eb; border-radius: 10px; background: #fff; font: inherit; }
+      .submit-button { width: 100%; margin-top: 10px; padding: 12px; border: 0; border-radius: 20px; background: #6c63ff; color: #fff; font: inherit; cursor: pointer; }
+      .submit-button:hover { background: #cfccff; color: #6c63ff; }
+      .account-links { display: flex; justify-content: center; gap: 18px; margin-top: 24px; font-size: 0.95rem; }
+      .account-links a { color: #6c63ff; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <main class="account-page">
+      <h1>ลืมรหัสผ่าน</h1>
+      <p class="description">กรอก Email เพื่อดำเนินการกู้คืนรหัสผ่าน</p>
+      <form onsubmit="return false">
+        <input class="field" type="email" placeholder="Email" aria-label="อีเมล" />
+        <button class="submit-button" type="button" onclick="window.location.href='../index.html'">ส่งคำขอ</button>
+      </form>
+      <div class="account-links">
+        <a href="./ล็อคอิน.html">กลับเข้าสู่ระบบ</a>
+        <a href="../index.html">หน้าหลัก</a>
+      </div>
+    </main>
+    <script src="../Js/script.js"></script>
+  </body>
+</html>
